@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { UserCardListComponent } from "./user-card-list/user-card-list.component";
+import { LoginFormComponent } from "./login-form/login-form.component";
+import {MaterialAngularComponent} from "./material-angular/material-angular.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  template: `<div>
+  <app-user-card-list></app-user-card-list>
+  <app-login-form></app-login-form>
+  <app-material-angular></app-material-angular>
+  </div>`,
+  imports: [UserCardListComponent, LoginFormComponent,MaterialAngularComponent]
 })
 export class AppComponent {
-  title = 'First_App';
+  
 }
